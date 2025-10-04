@@ -1,0 +1,131 @@
+﻿@page "/"
+
+<style>
+    body {
+        background-color: #000;
+        color: #f1e4b7;
+    }
+
+    .intro-container {
+        padding: 40px;
+        text-align: left;
+        background-color: #0d0d0d;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(228, 220, 174, 0.4);
+        margin: 40px auto;
+        max-width: 1000px;
+        transition: all 0.3s ease-in-out;
+        margin-top: 7rem;
+    }
+
+    .intro-container:hover {
+        box-shadow: 0 0 40px rgba(228, 220, 174, 0.4);
+    }
+
+    h1 {
+        color: #f1e4b7;
+        font-size: 3.5rem;
+        text-align: center;
+        margin-bottom: 10px;
+        text-shadow: 0 0 15px rgba(247, 239, 195, 0.822);
+    }
+
+    h2 {
+        color: #f1e4b7;
+        border-bottom: 2px solid #f1e4b7;
+        padding-bottom: 5px;
+        margin-top: 25px;
+        font-size: 2.5rem;
+    }
+
+    p,
+    li {
+        color: #dcdcdc;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    li::before {
+        content: "• ";
+        color: #f1e4b7;
+    }
+
+    .group-list {
+        background-color: #1a1a1a;
+        border-radius: 10px;
+        padding: 15px 25px;
+        margin-top: 15px;
+        transition: transform 0.3s ease;
+    }
+
+    .group-list:hover {
+        transform: scale(1.02);
+        background-color: #222;
+    }
+
+    .member {
+        color: #f0f0f0;
+        margin-bottom: 8px;
+    }
+
+    .highlight {
+        color: #f1e4b7;
+        font-weight: 600;
+    }
+</style>
+
+<div class="intro-container">
+    <h1>Naimat</h1>
+
+    <h2>Introduction</h2>
+    <p>
+        Food wastage is a growing challenge in urban areas, while at the same time many communities
+        suffer from food insecurity. Restaurants, grocery stores, and households often have surplus
+        food that could be redistributed if an efficient, scalable system existed.
+    </p>
+    <p>
+        <b>Naimat</b> aims to address this gap by building a cloud-based food redistribution platform
+        that connects donors with NGOs, volunteers, and individuals in need. The system leverages
+        Microsoft Azure services to provide scalability, reliability, AI-powered features, and
+        real-time operations.
+    </p>
+
+    <h2>Objectives</h2>
+    <ul>
+        <li>Build a scalable cloud application to connect surplus food providers with recipients.</li>
+        <li>Implement real-time matching of donors and recipients using geolocation.</li>
+        <li>Enable AI-powered categorization and search to streamline food donations.</li>
+        <li>Provide a transparent impact dashboard showing food saved, meals donated, and people served.</li>
+        <li>Ensure secure and seamless access for donors, NGOs, recipients, and volunteers.</li>
+    </ul>
+
+    <h2>Core Features</h2>
+    <ul>
+        <li><b>Donation Posting</b> – Donors can upload food details, images, and availability.</li>
+        <li><b>Pickup Coordination</b> – Matches donors with nearby NGOs/recipients and assigns volunteers.</li>
+        <li><b>Location-Based Matching</b> – Uses Azure Maps for proximity-based routing.</li>
+        <li><b>Food Categorization (AI-Powered)</b> – Automatically classifies food types and generates smart tags.</li>
+        <li><b>Semantic Search</b> – Multilingual search using AI embeddings (English, Roman Urdu, Urdu).</li>
+        <li><b>Notifications</b> – Real-time alerts for donors, volunteers, and recipients.</li>
+        <li><b>Impact Dashboard</b> – Displays statistics on donations, waste reduction, and reach.</li>
+        <li><b>Authentication</b> – Secure login for all user types.</li>
+    </ul>
+
+    <h2>Group Code: 'O' – 7B</h2>
+
+    <div class="group-list">
+        <p class="member"><span class="highlight">22K-4219</span> – Zehra Waqar</p>
+        <p class="member"><span class="highlight">22K-4579</span> – Amna Shah [Group Leader]</p>
+        <p class="member"><span class="highlight">22K-4237</span> – Zahab Jahangir</p>
+        <p class="member"><span class="highlight">22K-4179</span> – Misha Imam</p>
+        <p class="member"><span class="highlight">22K-4370</span> – Muhammad Mohsin</p>
+        <p class="member"><span class="highlight">22K-4420</span> – Saad Qamar</p>
+        <p class="member"><span class="highlight">22K-4448</span> – Aafreen</p>
+        <p class="member"><span class="highlight">22K-4293</span> – Anaksha Janki</p>
+    </div>
+</div>

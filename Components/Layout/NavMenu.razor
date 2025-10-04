@@ -1,0 +1,108 @@
+﻿@using Microsoft.AspNetCore.Components.Routing
+
+<div class="navbar navbar-expand-lg navbar-dark bg-dark px-4 shadow">
+    <div class="container-fluid justify-content-between align-items-center">
+        <!-- Left: Logo and Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="images/logo.png" alt="Naimat Logo"
+                 style="height:3.5rem; width:auto; margin-right:10px; border-radius:6px;">
+            <span class="brand-text">Naimat</span>
+        </a>
+
+        <!-- Center: Navigation Links as Grid -->
+        <div class="nav-center">
+            <NavLink href="/" class="nav-link" Match="NavLinkMatch.All">INTRODUCTION</NavLink>
+            <NavLink href="/architecture" class="nav-link">ARCHITECTURE</NavLink>
+            <NavLink href="/azure-services" class="nav-link">AZURE SERVICES</NavLink>
+        </div>
+    </div>
+</div>
+
+<style>
+    .navbar {
+        background-color: #000 !important;
+        border-bottom: 2px solid #f1e4b7;
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        top: 0;
+        height: 5rem;
+    }
+
+    .navbar-brand {
+        color: #f1e4b7 !important;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        font-family: 'Arizonia';
+        text-shadow: 0 0 15px rgba(241, 228, 183, 0.856);
+    }
+
+    /* Grid-based nav center */
+    .nav-center {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 3rem;
+        justify-content: end;
+        align-items: center;
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    .nav-center .nav-link {
+        position: relative;
+        color: #f1e4b7 !important;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        padding-bottom: 5px;
+        transition: color 0.3s ease;
+        text-align: center;
+    }
+
+    /* Gold underline animation on hover */
+    .nav-center .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 2px;
+        background-color: #f1e4b7;
+        transition: width 0.3s ease;
+    }
+
+    .nav-center .nav-link:hover::after {
+        width: 100%;
+    }
+
+    /* Keep underline for active page */
+    .nav-center .nav-link.active::after {
+        width: 100%;
+    }
+
+    .nav-link:focus {
+        box-shadow: none;
+    }
+
+    /* Responsive grid adjustment */
+    @@media (max-width: 1024px) {
+        .navbar {
+            flex-direction: column;
+            height: auto;
+            padding: 1rem;
+        }
+
+        .nav-center {
+            grid-auto-flow: column;
+            grid-gap: 1rem;
+            justify-items: center;
+            justify-content: center;
+        }
+
+        .nav-center .nav-link {
+            font-size: 1rem;
+        }
+    }
+</style>

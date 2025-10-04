@@ -1,0 +1,144 @@
+@page "/azure-services"
+
+<style>
+    body {
+        background-color: #000;
+        color: #f8ebc9;
+    }
+
+    .services-container {
+        padding: 40px;
+        text-align: center;
+        background-color: #0d0d0d;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(247, 239, 195, 0.4);
+        margin: 40px auto;
+        max-width: 1000px;
+        transition: all 0.3s ease-in-out;
+        margin-top: 7rem;
+    }
+
+    .services-container:hover {
+        box-shadow: 0 0 40px rgba(247, 239, 195, 0.4);
+    }
+
+    h1 {
+        color: #f1e4b7;
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+        text-shadow: 0 0 15px rgba(247, 239, 195, 0.822);
+    }
+
+    p {
+        color: #dcdcdc;
+        font-size: 1.2rem;
+    }
+
+    .section {
+        margin-top: 30px;
+        background-color: #1a1a1a;
+        border-radius: 15px;
+        padding: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+        transform: scale(1.02);
+        background-color: #222;
+    }
+
+    .section-title {
+        color: #f1e4b7;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #f1e4b7;
+        font-family: "Arizonia";
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background-color: #111;
+        border-left: 4px solid #f1e4b7;
+        margin: 10px 0;
+        padding: 10px;
+        color: #f0f0f0;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    li:hover {
+        background-color: #333;
+        transform: translateX(5px);
+    }
+
+</style>
+
+<div class="services-container">
+    <h1>Azure Services Overview</h1>
+    <p>
+        Our project leverages several Azure services to deliver scalability, AI-driven insights, 
+        secure storage, and seamless deployment. Each service plays a key role in the overall architecture.
+    </p>
+
+    <div class="section">
+        <div class="section-title">AI and Cognitive Services</div>
+        <ul>
+            <li>
+                <b>Azure AI Vision</b> — Used for intelligent food image labelling and categorization within our FastAPI AI module.
+            </li>
+            <li>
+                <b>Azure AI Search</b> — Enables context-aware and semantic search across donations, NGOs, and food categories.
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Application Hosting & Deployment</div>
+        <ul>
+            <li>
+                <b>Azure Container Apps</b> — Used to deploy both the NestJS backend and the FastAPI AI service for scalable containerized workloads.
+            </li>
+            <li>
+                <b>Azure Static Web Apps</b> — Hosts the ReactJS-based frontend, providing global availability and automatic CI/CD integration.
+            </li>
+            <li>
+                <b>Azure App Service</b> — Used for web hosting and to run our Blazor demo for this assignment.
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Storage and Data Management</div>
+        <ul>
+            <li>
+                <b>Azure Blob Storage</b> — Stores uploaded food images and large binary data for AI processing.
+            </li>
+            <li>
+                <b>Azure Cosmos DB</b> — Provides globally distributed, low-latency data storage for user, NGO, and donation data.
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Integration and Security</div>
+        <ul>
+            <li>
+                <b>Azure Functions</b> — Handles background event-driven operations such as notifications and data synchronization.
+            </li>
+            <li>
+                <b>Azure Maps</b> — Supports proximity-based routing to connect donors and recipients efficiently.
+            </li>
+            <li>
+                <b>Azure Key Vault</b> — Safeguards API keys, database credentials, and other application secrets.
+            </li>
+        </ul>
+    </div>
+
+    <p style="margin-top:30px;color:#ccc;">
+        Each of these Azure components ensures that our system remains intelligent, secure, and cloud-native.
+    </p>
+</div>

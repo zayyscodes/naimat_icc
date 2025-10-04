@@ -1,0 +1,135 @@
+@page "/architecture"
+
+@using Microsoft.AspNetCore.Components.Web
+@inject NavigationManager NavManager
+
+<style>
+    body {
+        background-color: #000;
+        color: #f1e4b7;
+    }
+
+    .architecture-container {
+        padding: 40px;
+        text-align: center;
+        background-color: #0d0d0d;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(235, 225, 174, 0.4);
+        margin: 40px auto;
+        max-width: 1000px;
+        transition: all 0.3s ease-in-out;
+        margin-top: 7rem;
+    }
+
+    .architecture-container:hover {
+        box-shadow: 0 0 40px rgba(235, 225, 174, 0.4);
+    }
+
+    h1 {
+        color: #f1e4b7;
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+        text-shadow: 0 0 15px rgba(247, 239, 195, 0.822);
+    }
+
+    p {
+        color: #dcdcdc;
+        font-size: 1.1rem;
+    }
+
+    .section {
+        margin-top: 30px;
+        background-color: #1a1a1a;
+        border-radius: 15px;
+        padding: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+        transform: scale(1.02);
+        background-color: #222;
+    }
+
+    .section-title {
+        color: #f1e4b7;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #f1e4b7;
+        font-family: "Arizonia";
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background-color: #111;
+        border-left: 4px solid #f1e4b7;
+        margin: 10px 0;
+        padding: 10px;
+        color: #f0f0f0;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    li:hover {
+        background-color: #333;
+        transform: translateX(5px);
+    }
+
+    .diagram {
+        margin-top: 30px;
+        border: 2px solid #f1e4b7;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .diagram:hover {
+        transform: scale(1.01);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+</style>
+
+<div class="architecture-container">
+    <h1>Project Architecture Design</h1>
+    <p>
+        Our semester project architecture integrates multiple Azure services and modern frameworks
+        for performance, scalability, and intelligence. Below is an overview of our proposed system.
+    </p>
+
+    <div class="section">
+        <div class="section-title">Overview</div>
+        <p>
+            The architecture uses a <b>ReactJS Frontend</b> with a <b>NestJS Backend</b> and a <b>FastAPI-based AI Service</b>.
+            Each component is deployed through Azure’s Container and Web App services for seamless cloud integration.
+        </p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Core Components</div>
+        <ul>
+            <li><b>Frontend:</b> ReactJS app hosted using Azure Static Web Apps</li>
+            <li><b>Backend:</b> NestJS Monolithic API with modules for Auth, Donations, Volunteering, and Search</li>
+            <li><b>AI Layer:</b> FastAPI-based microservice for food categorization and semantic searching</li>
+            <li><b>Storage:</b> Azure Blob Storage & Cosmos DB for persistent data</li>
+            <li><b>Automation:</b> Azure Functions for event-driven tasks</li>
+            <li><b>Mapping:</b> Azure Maps for proximity-based routing</li>
+            <li><b>Security:</b> Azure Key Vault for managing secrets</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Integration Diagram</div>
+        <div class="diagram">
+            <img src="images/architecture-diagram.jpeg" alt="Project Architecture Diagram" />
+        </div>
+        <p style="margin-top:10px; color:#ccc;">Fig 1: Visual representation of system components and Azure integrations</p>
+    </div>
+</div>
